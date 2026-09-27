@@ -1,0 +1,279 @@
+/* --- General Body and Background Styling --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1d2b4b, #121a2e);
+    color: #f0f0f0;
+}
+
+/* --- Authentication Page Container --- */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+}
+
+/* --- Glassmorphism Form Card (for Login/Register) --- */
+.auth-card {
+    width: 100%;
+    max-width: 450px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    color: #f0f0f0;
+}
+
+.auth-card .card-title {
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* --- Form Elements Styling --- */
+.form-control {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.form-control:-webkit-autofill,
+.form-control:-webkit-autofill:hover, 
+.form-control:-webkit-autofill:focus, 
+.form-control:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #1a253c inset !important;
+    -webkit-text-fill-color: #fff !important;
+}
+
+.form-control:focus {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    border-color: #8a9fff;
+    box-shadow: 0 0 15px rgba(138, 159, 255, 0.5);
+}
+
+/* --- Button Styling --- */
+.btn-primary {
+    background: linear-gradient(135deg, #6e85ff, #4a67ff);
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(110, 133, 255, 0.4);
+}
+
+/* --- Homepage Styling --- */
+.hero-section {
+    padding: 100px 0;
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    background: -webkit-linear-gradient(#eee, #8a9fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #aeb9e1;
+    max-width: 600px;
+    margin: 20px auto 30px auto;
+}
+
+.cta-button {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+}
+
+.features-section {
+    padding: 50px 0;
+}
+
+.section-title {
+    margin-bottom: 50px;
+    font-weight: 300;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #8a9fff;
+}
+
+.feature-card i {
+    color: #8a9fff;
+}
+
+.feature-card h5 {
+    color: #fff;
+    font-weight: 600;
+}
+
+.feature-card p {
+    color: #aeb9e1;
+    font-size: 0.9rem;
+}
+
+footer {
+    padding: 20px 0;
+}
+
+/* --- Navigation Bar Styling --- */
+/* --- Navigation Bar Styling --- */
+.custom-navbar {
+    background: rgba(44, 56, 82, 0.75);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: transparent !important;
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.navbar-brand i {
+    color: #8a9fff;
+    margin-right: 8px;
+}
+
+.nav-link {
+    color: #aeb9e1;
+    font-weight: 500;
+    margin: 0 10px;
+    padding: 8px 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #fff;
+    border-bottom-color: #8a9fff;
+}
+
+/* --- Styling for links on Auth Pages --- */
+.auth-card hr {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.auth-link {
+    color: #aeb9e1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.auth-link:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* --- Dashboard Card Width --- */
+.dashboard-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    color: #f0f0f0;
+    max-width: 95%; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Fix for Dark Text on Dark Backgrounds --- */
+.auth-card .form-label,
+.auth-card .text-muted,
+.auth-card .form-text,
+.dashboard-card .form-label,
+.dashboard-card .text-muted,
+.dashboard-card .form-text {
+    color: #aeb9e1 !important;
+}
+
+.form-control::placeholder {
+    color: #818eb3;
+    opacity: 0.7;
+}
+
+/* --- Password Toggle Icon Styling --- */
+.input-group-text {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: none; /* Remove the inner border */
+}
+
+.input-group .form-control {
+    border-right: none; /* Remove the inner border */
+}
+
+.input-group .form-control:focus {
+    z-index: 3;
+}
+
+/* --- Fix for Invisible Eye Icon --- */
+.input-group-text i {
+    color: #aeb9e1; /* Sets the icon color to a light blue */
+}
+
+/* --- AI Script Generator Modal Styling --- */
+.modal-content {
+    background: rgba(44, 56, 82, 0.9); /* Semi-transparent dark blue */
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #f0f0f0;
+    border-radius: 15px;
+}
+
+.modal-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.modal-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* --- Fix for Dark Text in Modal --- */
+.modal-content .text-muted {
+    color: #aeb9e1 !important;
+}
+
+/* --- Code Analysis Page Styling --- */
+#code-input, #results-output {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    background-color: #1a253c;
+    color: #c0c8e7;
+    border: none;
+}
+
+#results-output {
+    display: block;
+    white-space: pre-wrap; /* Allows text to wrap */
+    word-wrap: break-word; /* Breaks long words */
+    height: 100%;
+    min-height: 50vh;
+}

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="auth-container">
+    <div class="card auth-card">
+        <div class="card-body">
+            <h3 class="card-title text-center mb-4">Prem TestVerse Login</h3>
+            <form method="POST" action="{{ url_for('auth.login') }}">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <div class="input-group">
+                        <input type="password" class="form-control" name="password" id="password" required>
+                        <span class="input-group-text">
+                            <i class="fa-solid fa-eye" id="togglePassword" style="cursor: pointer;"></i>
+                        </span>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary w-100 mt-3">Login</button>
+            </form>
+            
+            <div class="text-center mt-3">
+                <a href="{{ url_for('auth.forgot_password') }}" class="auth-link">Forgot Password?</a>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">New user? <a href="{{ url_for('auth.register') }}" class="auth-link fw-bold">Click here to register</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

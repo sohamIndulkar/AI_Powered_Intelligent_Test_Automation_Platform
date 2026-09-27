@@ -1,0 +1,30 @@
+# Virtual Environment
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Database file
+database.db
+
+# Environment variables
+.envcat >> .gitignore <<'EOF'
+
+# Generated temporary reports
+app/static/temp_report_*.pdf
+
+# Local installer
+wkhtmltox-*.exe
+EOF
+
+
+
+
+[A[A[A[A[C[C[A[C[C[C[C[C[C[C[C[C[C[A[C[C[C[C[C[C[C[C[C[C[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[[A[C[C[C[C[C[C[C[C[C[C[Ccat >> .gitignore 
+git rm --cached -r
+
+
+[A[A[A[C[C[C[C[C[C[C[C[C[A[C[C[C[C[C[C[C[C[C[C[C[C[clear
+[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[B[B[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D[D$ cat >> .gitignore

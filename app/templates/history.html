@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}Test History{% endblock %}
+
+{% block content %}
+<div class="container text-white">
+    <h2 class="mb-4">Your Test History</h2>
+
+    {% if history %}
+    <div class="table-responsive">
+        <table class="table table-dark table-hover align-middle">
+            <thead>
+                <tr>
+                    <th>Date & Time</th>
+                    <th>URL Tested</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in history %}
+                <tr>
+                    <td>{{ item.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+                    <td>{{ item.url_tested }}</td>
+                    <td>
+                        {% if item.status == 'Success' %}
+                            <span class="badge bg-success">Success</span>
+                        {% else %}
+                            <span class="badge bg-danger">{{ item.status }}</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        <a href="{{ url_for('main.download_history', test_run_id=item.id) }}" class="btn btn-sm btn-danger">
+                            <i class="fas fa-file-pdf"></i> PDF
+                        </a>
+                        <a href="{{ url_for('main.download_excel', test_run_id=item.id) }}" class="btn btn-sm btn-success">
+                            <i class="fas fa-file-excel"></i> Excel
+                        </a>
+                        <form action="{{ url_for('main.delete_history', test_run_id=item.id) }}" method="POST" style="display:inline;" onsubmit="return confirm('Are you sure you want to delete this item?');">
+                            <button type="submit" class="btn btn-sm btn-secondary">
+                                <i class="fas fa-trash"></i> Delete
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+    <div class="alert alert-info" role="alert">
+        You have no test history yet. Go to the <a href="{{ url_for('main.dashboard') }}" class="alert-link">Dashboard</a> to run a new test.
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

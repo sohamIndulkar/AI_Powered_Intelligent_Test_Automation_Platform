@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome to Prem TestVerse{% endblock %}
+
+{% block content %}
+<div class="container text-center text-white">
+
+    <div class="hero-section">
+        <h1 class="hero-title">Prem TestVerse</h1>
+        <p class="hero-subtitle">The Future of Software Testing is Here. AI-Powered Automation to Streamline Your Workflow.</p>
+        <a href="{{ url_for('auth.login') }}" class="btn btn-primary btn-lg cta-button">Get Started</a>
+    </div>
+
+    <div class="features-section">
+        <h2 class="section-title">Core Features</h2>
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <div class="feature-card">
+                    <i class="fas fa-magic-wand-sparkles fa-3x mb-3"></i>
+                    <h5>Natural Language Testing</h5>
+                    <p>Write test cases in plain English. Our AI translates your words into executable automation scripts.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-card">
+                    <i class="fas fa-bug-slash fa-3x mb-3"></i>
+                    <h5>AI Bug Assistant</h5>
+                    <p>When tests fail, our AI analyzes the error and suggests the probable cause and a reliable fix.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-card">
+                    <i class="fas fa-microphone-alt fa-3x mb-3"></i>
+                    <h5>Voice Control</h5>
+                    <p>Execute tests hands-free using voice commands in multiple languages, not just English.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-card">
+                    <i class="fas fa-file-pdf fa-3x mb-3"></i>
+                    <h5>PDF & Excel Reports</h5>
+                    <p>Automatically generate and download detailed PDF or Excel reports of your test runs.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="feature-card">
+                    <i class="fa-solid fa-robot fa-3x mb-3"></i>
+                    <h5>AI Script Generation</h5>
+                    <p>Provide a URL and a goal. The AI analyzes the site and writes the entire test script for you.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-card">
+                    <i class="fa-solid fa-images fa-3x mb-3"></i>
+                    <h5>Visual Regression Testing</h5>
+                    <p>Automatically detect visual bugs by comparing screenshots to a saved "baseline" image.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-card">
+                    <i class="fa-solid fa-save fa-3x mb-3"></i>
+                    <h5>Save & Re-run Suites</h5>
+                    <p>Save complex test scripts as named "Test Suites" and re-run them anytime with a single click.</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="feature-card">
+                    <i class="fa-solid fa-database fa-3x mb-3"></i>
+                    <h5>Persistent History</h5>
+                    <p>All test runs are saved to your account, creating a complete history that you can review or delete.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="text-center text-muted mt-5">
+    <p>&copy; 2025 Prem TestVerse. Created by Prem Patil for the MCA Major Project.</p>
+</footer>
+{% endblock %}
